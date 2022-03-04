@@ -1,0 +1,25 @@
+<div style="display: flex; justify-content: center; ">
+  <div>
+    <div class="card">
+      <div class="card-body">
+        Точка отправления: {{ourWay.from}}
+      </div>
+      <div class="card-body">
+        Точка прибытия: {{ourWay.to}}
+      </div>
+      <div class="card-body">
+        Количество свободных мест: {{ourWay.passengerCount}}
+      </div>
+      <div class="card-body">
+        Дата и время отправления: {{ourWay.startAt}}
+      </div>
+    </div>
+
+    <div id="map" style="width: 1600px; height: 800px; padding: 0px; border: 8mm ridge rgba(82, 51, 51, 0.5)">
+    </div>
+  </div>
+</div>
+
+<script defer src="https://api-maps.yandex.ru/2.1/?apikey=95d7fff5-f316-404e-8382-f26a9a59fb87&lang=ru_RU"
+  type="text/javascript"></script>
+<script defer src="/javascripts/map.js"></script>

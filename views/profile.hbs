@@ -1,0 +1,27 @@
+<h1>Добро пожаловать на борт, {{ourUser.name}}!</h1>
+
+<div class="AddLot col-10 col-md-10 col-lg-10">
+  <button class="addBtn btn btn-primary" type="submit" href="/profile/form">{{#if isDriver}}Добавить новую
+    поездку{{else}}Найти поездку{{/if}}</button>
+</div>
+<div class="cardFull">
+  {{#each allWay}}
+  <div id={{id}} class="card mb-3" style="max-width: 1540px; left:20px">
+    <div class="row g-0">
+      <div class="column col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><a class="navbar-brand" href="/travelCard/{{id}}">{{from}} - {{to}}</a></h5>
+          <p class="card-text">{{description}}</p>
+          <p class="card-text">Дата отправления: {{startAt}}</p>
+        </div>
+        <button id={{id}} type="submit" class="btn btn-secondary">&nbsp; Удалить &nbsp;</button>
+        <button id={{id}} type="submit" class="editBtn btn btn-secondary">&nbsp; Редактировать &nbsp;</button>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+<script defer src="/javascripts/transitionToCard.js"></script>
+<script defer src="/javascripts/addLot.js"></script>
+<script defer src="/javascripts/deleteLot.js"></script>

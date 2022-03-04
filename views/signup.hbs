@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center">
+  <h3>Регистрация</h3>
+</div>
+<p class="d-flex justify-content-center" style="color: brown;">{{text}}</p>
+<div class="container h-100">
+  <div class="row h-500 justify-content-center align-items-center mu">
+    <div class="col-10 col-md-8 col-lg-6">
+      <form class="signup-form" action="/signup" method="post">
+        <div class="form-group mt-5">
+          <input type="text" name="name" class="form-control" placeholder="name...">
+        </div>
+        <div class="form-group mt-3">
+          <input type="email" name="email" class="form-control" placeholder="email...">
+        </div>
+        <div class="form-group mt-3">
+          <input type="password" name="password" class="form-control" placeholder="password...">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="selectCond">Выберите роль:</label>
+          <select id="selectCond" name="userRole" class="form-control">
+            <option selected value="1">Водитель</option>
+            <option value="2">Пассажир</option>
+          </select>
+        </div>
+        <div class="text-center mt-3">
+          <button type="submit" class="btn btn-secondary">&nbsp; register &nbsp;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

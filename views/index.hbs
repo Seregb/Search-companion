@@ -1,0 +1,25 @@
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col-md-10 col-lg-10">
+      <h3>Welcome to the search for a travel companion</h3>
+      {{#if userName}}
+      {{else}}
+      <p>For a start please <a href="/signin"> signin</a> or <a href="/signup">signup</a></p>
+      {{/if}}
+    </div>
+    <div class="cardFull">
+      {{#each allWay}}
+      <div id={{id}} class="card mb-3" style="max-width: auto">
+        <div class="row g-0">
+          <div class="column col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a class="navbar-brand" href="/travelCard/{{id}}">{{from}} - {{to}}</a></h5>
+              <p class="card-text">{{description}}</p>
+              <p class="card-text">Дата отправления: {{startAt}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>

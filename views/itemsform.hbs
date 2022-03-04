@@ -1,0 +1,52 @@
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="column col-10 col-md-10 col-lg-10">
+      <div class="AddLot col-10 col-md-10 col-lg-10">
+        {{#if isDriver}}
+        <h2 class="d-flex justify-content-center">Добавить новую поездку</h2>
+        {{else}}
+        <h2 class="d-flex justify-content-center">Найти поездку</h2>
+        {{/if}}
+      </div>
+      <form name="itemsForm" class="items-form" action="/profile" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputItem">Откуда</label>
+            <input type="text" name="From" class="form-control" id="inputItem" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputItem">Откуда</label>
+            <input type="text" name="To" class="form-control" id="inputItem" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="selectCond">{{#if isDriver}}Сколько человек сможешь взять{{else}}Сколько человек
+              поедет{{/if}}</label>
+            <select id="selectCond" name="passengerCount" class="form-control">
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputStartAt">Дата поездки</label>
+            <input type="datetime-local" name="startAt" class="form-control" id="inputStartAt" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="description">Примечание</label>
+          <textarea name="description" class="form-control" id="description" rows="3"></textarea>
+        </div>
+        {{#if isDriver}}
+        <button type="submit" class="addRide btn btn-primary">Добавить</button>
+        {{else}}
+        <button type="submit" class="findRide btn btn-primary">Поиск</button>
+        {{/if}}
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{{!-- <script defer src="/javascripts/findLot.js"></script>  --}}
+<script defer src="/javascripts/addLot.js"></script>
